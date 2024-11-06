@@ -32,7 +32,6 @@ def find_best_matching_answer(user_query: str):
     if not query_embedding:
         return "Error generating embedding."
 
-    # Query MongoDB for all documents that have 'answer_embedding'
     answers = collection.find({"answer_embedding": {"$exists": True}})
 
     best_match = None
