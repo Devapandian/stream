@@ -26,7 +26,6 @@ def generate_embedding(text: str) -> list:
         print(f"Error generating embedding: {e}")
         return []
 
-# Function to find the most similar question and return its answer
 def find_best_matching_answer(user_query: str):
     query_embedding = generate_embedding(user_query)
     if not query_embedding:
