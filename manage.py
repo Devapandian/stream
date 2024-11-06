@@ -15,7 +15,6 @@ client = MongoClient(os.getenv('MONGODBURL'))
 db = client['PetON']
 collection = db['pet-ai-questions']
 
-# Function to generate embeddings using OpenAI API
 def generate_embedding(text: str) -> list:
     try:
         response = openai.Embedding.create(
